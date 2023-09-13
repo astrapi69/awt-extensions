@@ -125,19 +125,21 @@ public class GraphicsDeviceExtensions
 	}
 
 	/**
-	 * If the screen is available the given {@link JFrame} will be show in the given screen.
+	 * If the screen is available, the given window will be shown in the given screen
 	 *
+	 * @param <T>
+	 *            the generic type of the window
 	 * @param screen
 	 *            the screen number.
-	 * @param frame
-	 *            the {@link JFrame}
+	 * @param window
+	 *            the window
 	 */
-	public static <T extends Window> void showOnScreen(final int screen, final T frame)
+	public static <T extends Window> void showOnScreen(final int screen, final T window)
 	{
 		if (isScreenAvailableToShow(screen))
 		{
 			final GraphicsDevice[] graphicsDevices = getAvailableScreens();
-			graphicsDevices[screen].setFullScreenWindow(frame);
+			graphicsDevices[screen].setFullScreenWindow(window);
 		}
 	}
 }
