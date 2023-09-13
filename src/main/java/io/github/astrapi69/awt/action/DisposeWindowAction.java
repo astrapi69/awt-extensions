@@ -22,8 +22,47 @@
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-package io.github.astrapi69;
+package io.github.astrapi69.awt.action;
 
-public class InitialTemplate
+import java.awt.Window;
+import java.awt.event.ActionEvent;
+import java.io.Serial;
+import java.util.Objects;
+
+import javax.swing.AbstractAction;
+
+/**
+ * The class {@link DisposeWindowAction}.
+ */
+public class DisposeWindowAction extends AbstractAction
 {
+
+	/** The Constant serialVersionUID. */
+	@Serial
+	private static final long serialVersionUID = 1L;
+	/** The window. */
+	private final Window window;
+
+	/**
+	 * Instantiates a new {@link DisposeWindowAction}.
+	 *
+	 * @param window
+	 *            the window
+	 */
+	public DisposeWindowAction(final Window window)
+	{
+		super("DisposeWindowAction");
+		Objects.requireNonNull(window);
+		this.window = window;
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	public void actionPerformed(final ActionEvent e)
+	{
+		window.setVisible(false);
+		window.dispose();
+	}
 }
