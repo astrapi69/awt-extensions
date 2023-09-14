@@ -1,8 +1,12 @@
 ## Change log
 ----------------------
 
-Version 1.1-SNAPSHOT
+Version 1.1
 -------------
+
+ADDED:
+
+- exports to the class file module-info.java for the corresponding package that have to be exported
 
 Version 1
 -------------

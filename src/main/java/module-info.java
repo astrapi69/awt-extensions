@@ -22,4 +22,10 @@ module awt.extensions.main
 {
 	requires java.desktop;
 	requires lombok;
+
+	exports io.github.astrapi69.awt.action;
+	exports io.github.astrapi69.awt.extension;
+	exports io.github.astrapi69.awt.screen;
+	exports io.github.astrapi69.awt.system;
+	exports io.github.astrapi69.awt.window.adapter;
 }
