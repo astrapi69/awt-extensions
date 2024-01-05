@@ -27,20 +27,31 @@ package io.github.astrapi69.awt.screen.position;
 import javax.swing.JFrame;
 import javax.swing.WindowConstants;
 
-public class WindowPositionStoreTest
+/**
+ * The ui test class for the class {@link ComponentPositionStore}
+ */
+public class ComponentPositionStoreTest
 {
+
+	/**
+	 * Test the class {@link ComponentPositionStore}
+	 *
+	 * @param args
+	 *            the args
+	 */
 	public static void main(final String[] args)
 	{
-		// create a frame
+		// create a component for instance a JFrame...
 		JFrame frame = new JFrame();
-		// create a store for the window position
-		final WindowPositionStore windowPositionStore = new WindowPositionStore(frame,
-			WindowPositionStoreTest.class, 600, 500);
-		// restore the window position
-		windowPositionStore.restorePosition();
-
-		Runtime.getRuntime().addShutdownHook(new Thread(() -> windowPositionStore.storePosition()));
-
+		// create a store for the component position
+		final ComponentPositionStore componentPositionStore = new ComponentPositionStore(frame,
+			ComponentPositionStoreTest.class, 600, 500);
+		// restore the component position...
+		componentPositionStore.restorePosition();
+		// add a shutdown hook...
+		Runtime.getRuntime()
+			.addShutdownHook(new Thread(() -> componentPositionStore.storePosition()));
+		// show the frame...
 		frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		frame.setVisible(true);
 		frame.pack();

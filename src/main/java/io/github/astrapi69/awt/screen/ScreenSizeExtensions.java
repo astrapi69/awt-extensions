@@ -457,19 +457,19 @@ public class ScreenSizeExtensions
 	/**
 	 * Positions the given window from the given position model
 	 *
-	 * @param window
+	 * @param component
 	 *            the window
 	 * @param componentPositionModel
 	 *            the window position model
 	 */
-	public static void setWindowPosition(Window window,
+	public static void setComponentPosition(Component component,
 		ComponentPositionModel componentPositionModel)
 	{
-		window.setPreferredSize(
+		component.setPreferredSize(
 			new Dimension(componentPositionModel.getWidth(), componentPositionModel.getHeight()));
-		window.setLocation(componentPositionModel.getXPosition(),
+		component.setLocation(componentPositionModel.getXPosition(),
 			componentPositionModel.getYPosition());
-		window.setSize(componentPositionModel.getWidth(), componentPositionModel.getHeight());
+		component.setSize(componentPositionModel.getWidth(), componentPositionModel.getHeight());
 	}
 
 	private static <T> T getFirst(final T[] array)

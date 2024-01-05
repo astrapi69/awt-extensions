@@ -27,7 +27,8 @@ package io.github.astrapi69.awt.screen.position;
 import lombok.Getter;
 
 /**
- * The enum {@link ComponentPositionPreference}
+ * The enum {@link ComponentPositionPreference} holds the key suffixes that will be saved in the
+ * preferences and the default with and height
  */
 @Getter
 public enum ComponentPositionPreference

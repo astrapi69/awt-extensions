@@ -24,23 +24,23 @@
  */
 package io.github.astrapi69.awt.screen.position;
 
+import java.awt.Component;
 import java.awt.Point;
-import java.awt.Window;
 import java.util.prefs.Preferences;
 
 import io.github.astrapi69.awt.screen.ScreenSizeExtensions;
 import lombok.NonNull;
 
 /**
- * The class {@link WindowPositionStore} provides algorithms to store the Window position
+ * The class {@link ComponentPositionStore} provides algorithms to store the component position
  */
-public class WindowPositionStore
+public class ComponentPositionStore
 {
 
 	/**
-	 * The reference to the window
+	 * The reference to the component
 	 */
-	Window window;
+	Component component;
 	/**
 	 * The reference to the class
 	 */
@@ -76,24 +76,24 @@ public class WindowPositionStore
 	int defaultHeight;
 
 	/**
-	 * Instantiates a new {@link WindowPositionStore} object with the given parameters
+	 * Instantiates a new {@link ComponentPositionStore} object with the given parameters
 	 *
-	 * @param window
-	 *            the window
+	 * @param component
+	 *            the component
 	 * @param clazz
 	 *            the clazz
 	 */
-	public WindowPositionStore(@NonNull final Window window, @NonNull final Class<?> clazz)
+	public ComponentPositionStore(@NonNull final Component component, @NonNull final Class<?> clazz)
 	{
-		this(window, clazz, ComponentPositionPreference.DEFAULT_WIDTH,
+		this(component, clazz, ComponentPositionPreference.DEFAULT_WIDTH,
 			ComponentPositionPreference.DEFAULT_HEIGHT);
 	}
 
 	/**
-	 * Instantiates a new {@link WindowPositionStore} object with the given parameters
+	 * Instantiates a new {@link ComponentPositionStore} object with the given parameters
 	 *
-	 * @param window
-	 *            the window
+	 * @param component
+	 *            the component
 	 * @param clazz
 	 *            the clazz
 	 * @param defaultWidth
@@ -101,12 +101,12 @@ public class WindowPositionStore
 	 * @param defaultHeight
 	 *            the default height
 	 */
-	public WindowPositionStore(@NonNull final Window window, @NonNull final Class<?> clazz,
+	public ComponentPositionStore(@NonNull final Component component, @NonNull final Class<?> clazz,
 		final int defaultWidth, final int defaultHeight)
 	{
 		this.defaultWidth = defaultWidth;
 		this.defaultHeight = defaultHeight;
-		this.window = window;
+		this.component = component;
 		this.clazz = clazz;
 		widthKey = clazz.getSimpleName() + ComponentPositionPreference.WIDTH.getKey();
 		heightKey = clazz.getSimpleName() + ComponentPositionPreference.HEIGHT.getKey();
@@ -130,7 +130,7 @@ public class WindowPositionStore
 		yPosition = preferences.getInt(yPositionKey, yPosition);
 		ComponentPositionModel componentPositionModel = ComponentPositionModel.builder()
 			.width(width).height(height).xPosition(xPosition).yPosition(yPosition).build();
-		ScreenSizeExtensions.setWindowPosition(window, componentPositionModel);
+		ScreenSizeExtensions.setComponentPosition(component, componentPositionModel);
 	}
 
 	/**
@@ -138,11 +138,11 @@ public class WindowPositionStore
 	 */
 	public void storePosition()
 	{
-		Point location = window.getLocation();
+		Point location = component.getLocation();
 		Preferences preferences = Preferences.userNodeForPackage(clazz);
 
-		int width = window.getWidth();
-		int height = window.getHeight();
+		int width = component.getWidth();
+		int height = component.getHeight();
 
 		int xPosition = (int)location.getX();
 		int yPosition = (int)location.getY();
