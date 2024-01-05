@@ -4,7 +4,9 @@
 Version 1.2-SNAPSHOT
 -------------
 
+ADDED:
 
+- new bean class ComponentPositionModel for store the position of a component
 
 Version 1.1
 -------------

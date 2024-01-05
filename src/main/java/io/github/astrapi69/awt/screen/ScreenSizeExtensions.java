@@ -40,6 +40,7 @@ import java.util.List;
 import javax.swing.JFrame;
 
 import io.github.astrapi69.awt.extension.AwtExtensions;
+import io.github.astrapi69.awt.screen.position.ComponentPositionModel;
 import lombok.NonNull;
 
 /**
@@ -274,6 +275,16 @@ public class ScreenSizeExtensions
 	}
 
 	/**
+	 * Gets the {@link Dimension} object from the current screen size
+	 *
+	 * @return Returns the {@link Dimension} object from the current screen size
+	 */
+	public static Dimension getScreenSizeDimension()
+	{
+		return Toolkit.getDefaultToolkit().getScreenSize();
+	}
+
+	/**
 	 * Gets the screen height of the {@link GraphicsDevice} that is displayed from the given
 	 * component
 	 *
@@ -441,6 +452,24 @@ public class ScreenSizeExtensions
 			frame.setVisible(true);
 			device.setFullScreenWindow(frame);
 		}
+	}
+
+	/**
+	 * Positions the given window from the given position model
+	 *
+	 * @param window
+	 *            the window
+	 * @param componentPositionModel
+	 *            the window position model
+	 */
+	public static void setWindowPosition(Window window,
+		ComponentPositionModel componentPositionModel)
+	{
+		window.setPreferredSize(
+			new Dimension(componentPositionModel.getWidth(), componentPositionModel.getHeight()));
+		window.setLocation(componentPositionModel.getXPosition(),
+			componentPositionModel.getYPosition());
+		window.setSize(componentPositionModel.getWidth(), componentPositionModel.getHeight());
 	}
 
 	private static <T> T getFirst(final T[] array)
