@@ -24,15 +24,15 @@
  */
 package io.github.astrapi69.awt.action;
 
-import lombok.Getter;
-import lombok.Setter;
-
 import java.awt.Window;
 import java.awt.event.ActionEvent;
 import java.io.Serial;
 import java.util.Objects;
 
 import javax.swing.AbstractAction;
+
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * The class {@link DisposeWindowAction}.
