@@ -24,6 +24,9 @@
  */
 package io.github.astrapi69.awt.action;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.awt.Window;
 import java.awt.event.ActionEvent;
 import java.io.Serial;
@@ -41,10 +44,20 @@ public class DisposeWindowAction extends AbstractAction
 	@Serial
 	private static final long serialVersionUID = 1L;
 	/** The window. */
-	private final Window window;
+	@Getter
+	@Setter
+	private Window window;
 
 	/**
-	 * Instantiates a new {@link DisposeWindowAction}.
+	 * Instantiates a new {@link DisposeWindowAction}
+	 */
+	public DisposeWindowAction()
+	{
+		super("DisposeWindowAction");
+	}
+
+	/**
+	 * Instantiates a new {@link DisposeWindowAction}
 	 *
 	 * @param window
 	 *            the window
