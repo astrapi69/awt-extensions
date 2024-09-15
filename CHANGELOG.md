@@ -1,7 +1,7 @@
 ## Change log
 ----------------------
 
-Version 1.3-SNAPSHOT
+Version 2.0-SNAPSHOT
 -------------
 
 ADDED:
@@ -10,6 +10,7 @@ ADDED:
 
 CHANGED:
 
+- rename of module to new name 'io.github.astrapisixtynine.awt.extensions'
 - update gradle to new version 8.8
 - update of dependency lombok version to 1.18.32
 - update of gradle-plugin dependency 'io.freefair.gradle:lombok-plugin' to new version 8.6

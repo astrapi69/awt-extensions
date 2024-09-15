@@ -18,10 +18,10 @@
  * DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-module awt.extensions.main
+module io.github.astrapisixtynine.awt.extensions
 {
+	requires static lombok;
 	requires java.desktop;
-	requires lombok;
 	requires java.prefs;
 
 	exports io.github.astrapi69.awt.action;
