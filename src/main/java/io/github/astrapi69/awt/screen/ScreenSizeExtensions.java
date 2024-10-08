@@ -49,8 +49,15 @@ import lombok.NonNull;
  * @author Asterios Raptis
  * @version 1.0
  */
-public class ScreenSizeExtensions
+public final class ScreenSizeExtensions
 {
+
+	/**
+	 * Private constructor to prevent instantiation
+	 */
+	private ScreenSizeExtensions()
+	{
+	}
 
 	/**
 	 * Maximizes the given {@link Window} from the given component

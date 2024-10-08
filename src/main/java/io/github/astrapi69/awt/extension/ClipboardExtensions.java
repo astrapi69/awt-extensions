@@ -30,8 +30,15 @@ import java.awt.datatransfer.StringSelection;
 /**
  * The class {@link ClipboardExtensions}
  */
-public class ClipboardExtensions
+public final class ClipboardExtensions
 {
+
+	/**
+	 * Private constructor to prevent instantiation
+	 */
+	private ClipboardExtensions()
+	{
+	}
 
 	/**
 	 * Copy the given {@link String} object to the clipboard

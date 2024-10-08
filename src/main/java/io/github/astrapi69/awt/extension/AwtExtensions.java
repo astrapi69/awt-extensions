@@ -44,6 +44,14 @@ import javax.swing.JOptionPane;
  */
 public final class AwtExtensions
 {
+
+	/**
+	 * Private constructor to prevent instantiation
+	 */
+	private AwtExtensions()
+	{
+	}
+
 	/**
 	 * Gets the root JDialog from the given Component Object.
 	 *

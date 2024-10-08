@@ -36,8 +36,15 @@ import javax.swing.JFrame;
  * The class {@link GraphicsDeviceExtensions} helps you if the user has more than one screen to
  * determine which screen is currently shown.
  */
-public class GraphicsDeviceExtensions
+public final class GraphicsDeviceExtensions
 {
+
+	/**
+	 * Private constructor to prevent instantiation
+	 */
+	private GraphicsDeviceExtensions()
+	{
+	}
 
 	/**
 	 * Gets the available screens.

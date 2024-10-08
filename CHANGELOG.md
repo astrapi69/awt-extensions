@@ -11,13 +11,14 @@ ADDED:
 CHANGED:
 
 - rename of module to new name 'io.github.astrapisixtynine.awt.extensions'
-- update gradle to new version 8.10.1
+- update gradle to new version 8.10.2
 - update of dependency lombok version to 1.18.34
-- update of gradle-plugin dependency 'io.freefair.gradle:lombok-plugin' to new version 8.1ß
+- update of gradle-plugin dependency 'io.freefair.gradle:lombok-plugin' to new version 8.10.2
 - update of gradle-plugin dependency 'com.github.ben-manes.versions.gradle.plugin' to new version 0.51.0
-- update of gradle-plugin dependency 'org.ajoberstar.grgit:grgit-gradle' to new version 5.2.2
+- update of gradle-plugin dependency 'org.ajoberstar.grgit:grgit-gradle' to new version 5.3.0
 - update of gradle-plugin dependency 'com.diffplug.spotless:spotless-plugin-gradle' to new version 7.0.0.BETA2
-- update of test dependency junit-jupiter version to new patch version 5.11.0
+- update of test dependency junit-jupiter version to new patch version 5.11.2
+- dependencies are managed now over bundles
 
 Version 1.2
 -------------

@@ -1,11 +1,9 @@
 dependencies {
-
-    compileOnly libs.lombok
-    annotationProcessor libs.lombok
-    testCompileOnly libs.lombok
-    testAnnotationProcessor libs.lombok
-
     // Note: use of bundles...
+    compileOnly libs.bundles.compile.only
+    annotationProcessor libs.bundles.annotation.processor
+    testCompileOnly libs.bundles.test.compile.only
+    testAnnotationProcessor libs.bundles.test.annotation.processor
     testImplementation libs.bundles.unit.testing
-    testRuntimeOnly libs.junit.platform.launcher
+    testRuntimeOnly libs.bundles.test.runtime.only
 }

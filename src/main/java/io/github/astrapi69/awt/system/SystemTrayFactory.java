@@ -42,6 +42,13 @@ public class SystemTrayFactory
 {
 
 	/**
+	 * Private constructor to prevent instantiation
+	 */
+	private SystemTrayFactory()
+	{
+	}
+
+	/**
 	 * Factory method for create a <code>SystemTray</code> from the given {@link TrayIcon} object
 	 * and the given {@link PopupMenu} object
 	 *
